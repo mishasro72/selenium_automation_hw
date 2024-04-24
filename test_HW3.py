@@ -58,6 +58,12 @@ def test_base_auth(driver):
 #    # alert.send_keys("admin" + "\t" + "admin" + "\n")
 #     time.sleep(2)
 
+@pytest.mark.current
+def test_base_auth_2(driver):
+
+    page = WaitPageClass(driver, DB.BASE_URL_BASE_AUTH)
+    page.popup_auth_wait()
+    page.check_success_basic_auth()
 
 
 
